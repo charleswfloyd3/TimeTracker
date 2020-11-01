@@ -1,0 +1,25 @@
+import time
+def timetracker():
+        start_time = time.time()
+        count = 0
+        while True:
+            start = input("\nPress 0 to start timer or press 1 for more options: ")
+            if start == '0':
+                end = input("\nPress 1 to end timer: ")
+                while True:
+                    if end == '1':
+                        end_time = time.time()
+                        time_elapsed = end_time - start_time
+                        count =round(((count + time_elapsed) / 3600),2)
+                        break
+                    else:
+                        print("Press 1 dummy")
+
+            elif start == '1':
+                worktime = input("\nPress 2 to see how long you have worked today or press 3 to see how long you have worked everyday for the last week: ")
+                if worktime == '2':
+                    print("\nYou have worked " + str(count) + " hours today, get those numbers up!")
+                elif worktime == '3':
+                    pass
+
+timetracker()
