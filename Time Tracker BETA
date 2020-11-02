@@ -1,4 +1,5 @@
 import time
+import webbrowser
 def timetracker():
         start_time = time.time()
         count = 0
@@ -20,6 +21,6 @@ def timetracker():
                 if worktime == '2':
                     print("\nYou have worked " + str(count) + " hours today, get those numbers up!")
                 elif worktime == '3':
-                    pass
+                     webbrowser.open('https://docs.google.com/spreadsheets/u/0/')   
 
 timetracker()
